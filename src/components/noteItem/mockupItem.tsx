@@ -1,4 +1,4 @@
-interface IListCards {
+export interface IListCards {
   id: string
   title: string
   note: string

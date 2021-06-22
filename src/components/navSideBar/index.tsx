@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './index.module.scss'
 import ListIcon from '@material-ui/icons/List'
 import NoteItem from '../noteItem/'
-// import data from '../noteItem/mockupItem'
-
+import data, { IListCards } from '../noteItem/mockupItem'
 const NavSideBar: React.FC = () => {
   // const [isToggle, setIsToggle] = useState(true)
-  // const [list, setList] = useState([])
+  const [list, setList] = useState<IListCards[]>([])
 
   useEffect(() => {
-    // setList(data)
+    setList(data)
   }, [])
 
   return (
