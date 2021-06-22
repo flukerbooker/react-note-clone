@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { useFormikContext, withFormik, Form, Field } from 'formik'
+import ContentComponant from './components/contentComponent'
+import NavSideBar from './components/navSideBar'
+import NavTopBar from './components/navTopBar'
 
 function App() {
+  const { values, errors, touched } = useFormikContext<any>()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ display: 'flex' }}>
+      <div style={{ width: '-webkit-fill-available', overflow: 'hidden' }}>
+        <NavSideBar />
+        <div>
+          <NavTopBar />
+          <ContentComponant />
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+const EnhancedApp = withFormik({
+  mapPropsToValues: (props) => ({
+    //
+  }),
+  validate: (values) => {
+    //
+  },
+  handleSubmit: (values, { setFieldValue }) => {
+    // console.log(values)
+  },
+})(App)
+
+export default EnhancedApp
