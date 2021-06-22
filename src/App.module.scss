@@ -1,0 +1,13 @@
+.root {
+  height: 100vh;
+  display: flex;
+  flex-basis: 30%;
+  gap: 3px;
+  background-color: #161618;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}

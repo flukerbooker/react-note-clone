@@ -1,10 +1,15 @@
 import React from 'react'
 import styles from './index.module.scss'
+import NoteAddIcon from '@material-ui/icons/NoteAdd'
 
 const NavTopBar: React.FC = (props: any) => {
   return (
-    <nav>
-      <div>icon</div>
+    <nav className={`${styles.navbar}`}>
+      <div className={`${styles.iconWrapper}`}>
+        <div className={`${styles.icon}`}>
+          <NoteAddIcon style={{ color: 'grey' }} />
+        </div>
+      </div>
     </nav>
   )
 }

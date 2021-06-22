@@ -1,0 +1,15 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+  color: #ffffff;
+  background-color: #212124;
+  .icon {
+    padding: 10px 15px;
+    border-bottom: 2px solid #818181;
+  }
+
+  .title {
+    padding: 0 15px;
+  }
+}
